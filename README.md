@@ -1,3 +1,3 @@
 # Covid Ipsum <hr /> 
 
-## Topical Comical Dummy text.  [See Here](https://tomcat-js.github.io/COVIDipsum/)
+## Topical Comical Dummy Text.  [See Here](https://tomcat-js.github.io/COVIDipsum/)
