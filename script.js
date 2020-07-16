@@ -216,6 +216,15 @@ const sentenceEnd = [
     'dogma' 
 ]
  
+const RandomizeFullStopOrComma = () => {
+    let zeroOrOne = Math.round(Math.random())
+    if (zeroOrOne === 0) {
+        return '.';
+    } else {
+        return ',';
+    }
+}
+
 
 const makeSentence = (body, end) => {
     let sentence = [];
@@ -237,8 +246,11 @@ const makeSentence = (body, end) => {
     const restOfSentence = sentenceAsString.slice(1);
     const capitalLetter = sentenceAsString[0].toUpperCase();
 
-    return capitalLetter + restOfSentence + '. '; 
+    let sentenceWithCapsCommaFullStop = capitalLetter + restOfSentence + RandomizeFullStopOrComma() + ' ';
+
+    return sentenceWithCapsCommaFullStop; 
 }
+
 
 
 const makeParagraph = numOfSentences => {
@@ -247,7 +259,24 @@ const makeParagraph = numOfSentences => {
         paragraph += makeSentence(sentenceBody, sentenceEnd);
     }
 
-    return paragraph;
+    let splitParagraph = paragraph.split('');
+    let paragraphWithLowerCaseAfterComma = [];
+
+    // this for loop is just changing all the capital letters after a comma into lowercase 
+    for (let i = 0; i < splitParagraph.length - 2; i++) {
+
+        if (splitParagraph[i] === ',') {
+
+            splitParagraph[i + 2] = splitParagraph[i + 2].toLowerCase()
+
+            paragraphWithLowerCaseAfterComma.push(splitParagraph[i]);
+        } else {
+            paragraphWithLowerCaseAfterComma.push(splitParagraph[i])
+        }
+    }
+
+    return paragraphWithLowerCaseAfterComma.join('') + '.';
+
 }
 
 
