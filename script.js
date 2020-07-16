@@ -265,6 +265,10 @@ let allParagraphs = [paraOne, paraTwo, paraThree, paraFour, paraFive];
 const printParagraphs= (event) => {
     event.preventDefault();
 
+    allParagraphs.forEach(paragraph => {
+        paragraph.innerHTML = "";
+    })
+
     let numBetweenFourandSix = 3 + Math.ceil(Math.random() * 3);
 
     for (let i = 0; i < selector.value; i++) {
