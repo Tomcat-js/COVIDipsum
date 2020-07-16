@@ -41,12 +41,12 @@ const sentenceBody = [
     'damage to the economic',
     're-entry',
     'early stages',
-    'medical workers',
-    'infections',
+    'medical worker',
+    'infection',
     'military',
     'regrettable',
     'restrictions',
-    'close borders',
+    'close border',
     'elimination',
     'island continent',
     'regulatory relief',
@@ -119,7 +119,7 @@ const sentenceBody = [
     'face',
     'slow recovery from',
     'Jetstar',
-    'super-spreaders',
+    'super-spreader',
     'gathering limits',
     'cold or flu',
     'Woolworths',
@@ -240,9 +240,10 @@ const makeSentence = (body, end) => {
     return capitalLetter + restOfSentence + '. '; 
 }
 
-const numberOfSentences = number => {
+
+const makeParagraph = numOfSentences => {
     let paragraph = '';
-    for (let i = 0; i < number; i++ ) {
+    for (let i = 0; i < numOfSentences; i++ ) {
         paragraph += makeSentence(sentenceBody, sentenceEnd);
     }
 
@@ -252,13 +253,26 @@ const numberOfSentences = number => {
 
 const selector = document.getElementById('sentence_selector');
 const selectorBtn = document.querySelector('.btn');
-const textArea = document.querySelector('.text_area');
 
-const printSentences= (event) => {
-    event.preventDefault()
-    textArea.textContent = numberOfSentences(selector.value)
+const paraOne = document.querySelector('.paragraph_one');
+const paraTwo = document.querySelector('.paragraph_two');
+const paraThree = document.querySelector('.paragraph_three');
+const paraFour = document.querySelector('.paragraph_four');
+const paraFive = document.querySelector('.paragraph_five');
+
+let allParagraphs = [paraOne, paraTwo, paraThree, paraFour, paraFive];
+
+const printParagraphs= (event) => {
+    event.preventDefault();
+
+    let numBetweenFourandSix = 3 + Math.ceil(Math.random() * 3);
+
+    for (let i = 0; i < selector.value; i++) {
+        allParagraphs[i].textContent = makeParagraph(numBetweenFourandSix);
+    }
+    
 }
 
-selectorBtn.addEventListener('click', printSentences)
+selectorBtn.addEventListener('click', printParagraphs);
 
 

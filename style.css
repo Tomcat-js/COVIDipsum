@@ -5,7 +5,7 @@ html, body {
 
 main {
     width: 60%;
-    padding-top: 10%;
+    padding-top: 5%;
     margin: 0 auto;
 }
 
@@ -42,8 +42,12 @@ header {
 
 .text_area {
     padding-top: 5%;
-    font-size: 2rem;
+    font-size: 1.8rem;
     min-height: calc(120vh - 50px);
+}
+
+.para {
+    padding: 2% 0;
 }
 
 .btn {
@@ -67,7 +71,7 @@ header {
     border-radius: 5px; 
 }
 
-.num_of_sentences {
+.num_of_paragraphs {
     padding: 0 2%;
 }
 
@@ -175,6 +179,7 @@ a {
     .text_area {
         padding-top: 5%;
         font-size: 1.5rem;
+        min-height: calc(340vh - 50px);
     }
 
     .title {
