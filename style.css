@@ -179,7 +179,7 @@ a {
     .text_area {
         padding-top: 5%;
         font-size: 1.5rem;
-        min-height: calc(340vh - 50px);
+        min-height: calc(500vh - 50px);
     }
 
     .title {
