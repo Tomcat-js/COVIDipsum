@@ -1,4 +1,4 @@
-body {
+html, body {
     margin: 0;
     font-family: 'Montserrat', sans-serif;
 }
@@ -43,6 +43,7 @@ header {
 .text_area {
     padding-top: 5%;
     font-size: 2rem;
+    min-height: calc(120vh - 50px);
 }
 
 .btn {
@@ -100,6 +101,13 @@ a {
     .text_area {
         padding-top: 5%;
         font-size: 1.5rem;
+        min-height: calc(140vh - 50px);
+    }
+
+    main {
+        width: 80%;
+        padding-top: 5%;
+        margin: 0 auto;
     }
 }
 
@@ -123,13 +131,13 @@ a {
         padding: 2%;
         font-size: 1.2rem;
         text-align: center;
-        border-radius: 15px;
-    
+        border-radius: 15px;    
     }
 
     .text_area {
         padding-top: 5%;
         font-size: 1.5rem;
+        min-height: calc(290vh - 50px);
     }
 
     .title {
