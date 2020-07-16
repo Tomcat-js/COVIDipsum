@@ -125,12 +125,13 @@ const sentenceBody = [
     'Woolworths',
     'pivots',
     'Pokemon Go',
-    'local Government',
+    "local Government's",
     'face mask',
     'out of control',
     'community transmission',
     'excessive',
-    'tightening'
+    'tightening',
+    'police now fining'
 ]
 
 
@@ -214,15 +215,16 @@ const sentenceEnd = [
     'problem',
     'suburban blitz',
     'dogma',
-    'super-spreader' 
+    'super-spreader',
+    'excuse' 
 ]
  
 const RandomizeFullStopOrComma = () => {
-    let zeroOrOne = Math.round(Math.random())
+    let zeroOrOne = Math.round(Math.random() * 2)
     if (zeroOrOne === 0) {
-        return '.';
-    } else {
         return ',';
+    } else {
+        return '.';
     }
 }
 
