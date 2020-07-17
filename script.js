@@ -262,29 +262,40 @@ const makeParagraph = numOfSentences => {
         paragraph += makeSentence(sentenceBody, sentenceEnd);
     }
 
+    return recapitalizeWords(paragraph);
+}
+
+const recapitalizeWords = (paragraph) => {
     let punctuatedParagraph = makeParagraphWithLowerCaseAfterComma(paragraph);
 
     let paraSplitByWord = punctuatedParagraph.split(' ');
     let paraWithCorrectUpperCase = [];
-
+    
     for (let i = 0; i < paraSplitByWord.length; i++) {
-        if (paraSplitByWord[i] === 'cOVID') {
 
+        if (
+            paraSplitByWord[i] === 'cOVID' || paraSplitByWord[i] === 'jobKeeper' ||
+            paraSplitByWord[i] === 'iCU capacity' || paraSplitByWord[i] === 'cOVID-19' || 
+            paraSplitByWord[i] === 'cOVIDsafe' || paraSplitByWord[i] === 'department of Health media releases' || 
+            paraSplitByWord[i] === 'jetstar' || paraSplitByWord[i] === 'woolworths' 
+            || paraSplitByWord[i] === 'pokemon Go'
+            ) {
+    
             let wordSplitByLetter = paraSplitByWord[i].split('');
-      
-            let firstLetter = wordSplitByLetter.shift().toUpperCase()
-
-            wordSplitByLetter.unshift(firstLetter)
-            const upperCaseWord = wordSplitByLetter.join('')
+            let firstLetter = wordSplitByLetter.shift().toUpperCase();
+    
+            wordSplitByLetter.unshift(firstLetter);
+            const upperCaseWord = wordSplitByLetter.join('');
         
             paraWithCorrectUpperCase.push(upperCaseWord);
         } else {
             paraWithCorrectUpperCase.push(paraSplitByWord[i]);
         }
-    }
-
+    } 
         return paraWithCorrectUpperCase.join(' ');
 }
+
+
 
 const makeParagraphWithLowerCaseAfterComma = (paragraph) => {
 
@@ -329,10 +340,10 @@ const printParagraphs= (event) => {
         paragraph.innerHTML = "";
     })
 
-    let numBetweenFourandSix = 3 + Math.ceil(Math.random() * 3);
+    let numBetweenFiveAndSeven = 4 + Math.ceil(Math.random() * 3);
 
     for (let i = 0; i < selector.value; i++) {
-        allParagraphs[i].textContent = makeParagraph(numBetweenFourandSix);
+        allParagraphs[i].textContent = makeParagraph(numBetweenFiveAndSeven);
     }
     
 }

@@ -43,7 +43,7 @@ header {
 .text_area {
     padding-top: 5%;
     font-size: 1.8rem;
-    min-height: calc(120vh - 50px);
+    min-height: calc(140vh - 50px);
 }
 
 .para {
@@ -105,7 +105,7 @@ a {
     .text_area {
         padding-top: 5%;
         font-size: 1.5rem;
-        min-height: calc(140vh - 50px);
+        min-height: calc(150vh - 50px);
     }
 
     main {
@@ -141,7 +141,7 @@ a {
     .text_area {
         padding-top: 5%;
         font-size: 1.5rem;
-        min-height: calc(290vh - 50px);
+        min-height: calc(200vh - 50px);
     }
 
     .title {
@@ -179,7 +179,7 @@ a {
     .text_area {
         padding-top: 5%;
         font-size: 1.5rem;
-        min-height: calc(500vh - 50px);
+        min-height: calc(650vh - 50px);
     }
 
     .title {
