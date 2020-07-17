@@ -207,7 +207,7 @@ const sentenceEnd = [
     'border closure',
     'shut down',
     'as the unemployment rate rises',
-    'Genration COVID',
+    'Generation COVID',
     'social distancing measures',
     'impact',
     'with the highest infection levels that we’ve ever seen',
