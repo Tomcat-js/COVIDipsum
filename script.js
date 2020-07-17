@@ -112,7 +112,7 @@ const sentenceBody = [
     'economic',
     'breaching',
     'testing',
-    'fucking',
+    'f@#king',
     'the ongoing impact of',
     'widespread business closures',
     'gradual',
@@ -262,16 +262,42 @@ const makeParagraph = numOfSentences => {
         paragraph += makeSentence(sentenceBody, sentenceEnd);
     }
 
+    let punctuatedParagraph = makeParagraphWithLowerCaseAfterComma(paragraph);
+
+    let paraSplitByWord = punctuatedParagraph.split(' ');
+    let paraWithCorrectUpperCase = [];
+
+    for (let i = 0; i < paraSplitByWord.length; i++) {
+        if (paraSplitByWord[i] === 'cOVID') {
+
+            let wordSplitByLetter = paraSplitByWord[i].split('');
+      
+            let firstLetter = wordSplitByLetter.shift().toUpperCase()
+
+            wordSplitByLetter.unshift(firstLetter)
+            const upperCaseWord = wordSplitByLetter.join('')
+        
+            paraWithCorrectUpperCase.push(upperCaseWord);
+        } else {
+            paraWithCorrectUpperCase.push(paraSplitByWord[i]);
+        }
+    }
+
+        return paraWithCorrectUpperCase.join(' ');
+}
+
+const makeParagraphWithLowerCaseAfterComma = (paragraph) => {
+
     let splitParagraph = paragraph.split('');
     let paragraphWithLowerCaseAfterComma = [];
-
+    
     // this for loop is just changing all the capital letters after a comma into lowercase 
     for (let i = 0; i < splitParagraph.length - 2; i++) {
-
+    
         if (splitParagraph[i] === ',') {
-
+    
             splitParagraph[i + 2] = splitParagraph[i + 2].toLowerCase()
-
+    
             paragraphWithLowerCaseAfterComma.push(splitParagraph[i]);
         } else {
             paragraphWithLowerCaseAfterComma.push(splitParagraph[i])
@@ -279,8 +305,10 @@ const makeParagraph = numOfSentences => {
     }
 
     return paragraphWithLowerCaseAfterComma.join('') + '.';
-
 }
+
+
+
 
 
 const selector = document.getElementById('sentence_selector');
