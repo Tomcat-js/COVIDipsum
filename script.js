@@ -82,7 +82,6 @@ const sentenceBody = [
     'stay at home',
     'caregiving',
     'work from home',
-    'supermarket shelves',
     'diagnosis',
     'shortness of breath',
     'sore throat',
@@ -225,7 +224,8 @@ const sentenceEnd = [
     'Achilles heel',
     'social ill',
     'fault lines',
-    'facing a nervy future'
+    'facing a nervy future',
+    'with empty supermarket shelves'
 ]
  
 const RandomizeFullStopOrComma = () => {
