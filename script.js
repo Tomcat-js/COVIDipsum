@@ -77,7 +77,7 @@ const sentenceBody = [
     'regional ',
     'social distancing',
     'total number of',
-    '224',
+    'more and more',
     'COVID-19',
     'stay at home',
     'caregiving',
