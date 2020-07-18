@@ -219,7 +219,7 @@ const sentenceEnd = [
     'problem',
     'suburban blitz',
     'dogma',
-    'super-spreader',
+    'super-spreaders',
     'excuse',
     'interdependence',
     'Achilles heel',
