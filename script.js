@@ -92,7 +92,7 @@ const sentenceBody = [
     'nausea',
     'detection',
     'mental health',
-    'maintaining 1.5 metres of distance between any',
+    'maintaining 1.5 metres of distance between you and',
     'hand sanitising',
     'impacting',
     'tackle',
@@ -131,7 +131,11 @@ const sentenceBody = [
     'community transmission',
     'excessive',
     'tightening',
-    'police now fining'
+    'police now fining',
+    'unemployed',
+    'globally mobile',
+    'irrationally obstinate',
+    'misguided'
 ]
 
 
@@ -216,7 +220,12 @@ const sentenceEnd = [
     'suburban blitz',
     'dogma',
     'super-spreader',
-    'excuse' 
+    'excuse',
+    'interdependence',
+    'Achilles heel',
+    'social ill',
+    'fault lines',
+    'facing a nervy future'
 ]
  
 const RandomizeFullStopOrComma = () => {
