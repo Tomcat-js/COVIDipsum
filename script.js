@@ -122,7 +122,7 @@ const sentenceBody = [
     'gathering limits',
     'cold or flu',
     'Woolworths',
-    'pivots',
+    'pivot',
     'Pokemon Go',
     "local Government's",
     'face mask',
